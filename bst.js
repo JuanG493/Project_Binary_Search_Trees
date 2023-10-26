@@ -358,11 +358,11 @@ class Tree {
 
 //HOW TO USE
 // 1. create a new instance of the Tree;
-// let fruitsTre = new Tree();
+let fruitsTre = new Tree();
 // 2. to build the tree use the buildtree method that take´s parameters (array, boolean)
 //    array can be oder o unsorted if it is sorted you can skip this step seting the boolean to true.
 
-// fruitsTre.buildTree([1, 2, 3, 4, 5, 6, 7, 8, 9], true)
+fruitsTre.buildTree([1, 2, 3, 4, 5, 6, 7], true);
 // fruitsTre.buildTree([2, 4, 8, 9, 1, 7, 2, 5, 3, 6]);
 // fruitsTre.buildTree(['A', 'B', 'C', 'D', 'E', 'F', 'G']);
 // fruitsTre.buildTree([20, 10, 25, 45, 5, 30, 15, 35]);
@@ -388,7 +388,7 @@ class Tree {
 // fruitsTre.delete(20)
 
 // fruitsTre.delete(5)
-// fruitsTre.print();
+fruitsTre.print();
 
 //breadthFirst
 // function breadthFirstLevel(node) {
@@ -446,66 +446,66 @@ class Tree {
 
 // tie it all together
 
-let myRandomNums = [];
-for (let i = 0; i < 100; i++) {
-  let randNum = Math.floor(Math.random() * 99);
-  myRandomNums.push(randNum);
-}
+// let myRandomNums = [];
+// for (let i = 0; i < 100; i++) {
+//   let randNum = Math.floor(Math.random() * 99);
+//   myRandomNums.push(randNum);
+// }
 
-console.log(myRandomNums);
-let randimTree = new Tree();
-randimTree.buildTree(myRandomNums);
-randimTree.print();
-// isBalanced?
-console.log(randimTree.isBalanced());
+// console.log(myRandomNums);
+// let randimTree = new Tree();
+// randimTree.buildTree(myRandomNums);
+// randimTree.print();
+// // isBalanced?
+// console.log(randimTree.isBalanced());
 
-//levelOrder.
-let arryLevelOrder = [];
-function levelOrderFun(node) {
-  arryLevelOrder.push(node.value);
-}
-randimTree.levelOrder(levelOrderFun);
-console.log("level Order:", arryLevelOrder);
+// //levelOrder.
+// let arryLevelOrder = [];
+// function levelOrderFun(node) {
+//   arryLevelOrder.push(node.value);
+// }
+// randimTree.levelOrder(levelOrderFun);
+// console.log("level Order:", arryLevelOrder);
 
-//inOrder
-let arryInOrder = [];
-function inOrderFun(node) {
-  arryInOrder.push(node.value);
-}
-randimTree.inOrder(inOrderFun);
-console.log("In order:", arryInOrder);
+// //inOrder
+// let arryInOrder = [];
+// function inOrderFun(node) {
+//   arryInOrder.push(node.value);
+// }
+// randimTree.inOrder(inOrderFun);
+// console.log("In order:", arryInOrder);
 
-//PostOrder
-let arryPostOrder = [];
-function postOrderFun(node) {
-  arryPostOrder.push(node.value);
-}
-randimTree.postOrder(postOrderFun);
-console.log("Post Order: ", arryInOrder);
+// //PostOrder
+// let arryPostOrder = [];
+// function postOrderFun(node) {
+//   arryPostOrder.push(node.value);
+// }
+// randimTree.postOrder(postOrderFun);
+// console.log("Post Order: ", arryInOrder);
 
-// PreOrder
-let arryPreOrder = [];
-function preOrderFun(node) {
-  arryPreOrder.push(node.value);
-}
-randimTree.preOrder(preOrderFun);
-console.log("PreOrder: ", arryInOrder);
+// // PreOrder
+// let arryPreOrder = [];
+// function preOrderFun(node) {
+//   arryPreOrder.push(node.value);
+// }
+// randimTree.preOrder(preOrderFun);
+// console.log("PreOrder: ", arryInOrder);
 
-// adding elements to unbalance the tree.
-randimTree.insert(120);
-randimTree.insert(111);
-randimTree.insert(110);
-randimTree.insert(150);
-randimTree.print();
-// isBalanced?
-console.log(randimTree.isBalanced());
-randimTree.rebalance();
-randimTree.print();
-// isBalanced?
-console.log(randimTree.isBalanced());
+// // adding elements to unbalance the tree.
+// randimTree.insert(120);
+// randimTree.insert(111);
+// randimTree.insert(110);
+// randimTree.insert(150);
+// randimTree.print();
+// // isBalanced?
+// console.log(randimTree.isBalanced());
+// randimTree.rebalance();
+// randimTree.print();
+// // isBalanced?
+// console.log(randimTree.isBalanced());
 
-//  arrays of nodes using the order.
-console.log(randimTree.levelOrder());
-console.log(randimTree.inOrder());
-console.log(randimTree.preOrder());
-console.log(randimTree.postOrder());
+// //  arrays of nodes using the order.
+// console.log(randimTree.levelOrder());
+// console.log(randimTree.inOrder());
+// console.log(randimTree.preOrder());
+// console.log(randimTree.postOrder());
